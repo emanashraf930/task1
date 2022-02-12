@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "npm-validate-npm-package-name": "^0.0.2",
+    "yargs": "^17.3.1"
+  }
+}
