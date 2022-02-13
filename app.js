@@ -2,8 +2,7 @@
 
 
 const { describe } = require('yargs')
-const sum = require('./tools/sum')
-sum()
+
 
 const yargs = require('yargs')
 const student = require('./tools/student')
@@ -24,7 +23,7 @@ yargs.command({
         degree: {
             describe: 'hello',
             demandOption: false,
-            type: 'string'
+            type: 'array'
         },
         comment: {
             description: "hello comment",

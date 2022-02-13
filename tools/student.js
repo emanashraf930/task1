@@ -1,5 +1,16 @@
 const fs = require('fs')
 
+let sum;
+const sumFunction = (x) => {
+
+    sum = 0
+        // Here all the elements of the array is being printed.
+    for (let i = 0; i < x.length; i++) {
+        sum += x[i]
+    }
+    return sum
+}
+
 const addStudent = (id, name, degree, comment) => {
     const student = loadStudent()
     const duplicated = student.find((x) => {
@@ -68,20 +79,32 @@ const readStudents = (y) => {
     })
     console.log(studentRead)
     if (studentRead) {
-        console.log(studentRead.name)
+
+        if (studentRead.degree == undefined && studentRead.comment == undefined) {
+            console.log(studentRead.name)
+        } else if (studentRead.degree !== undefined && studentRead.comment == undefined) {
+            console.log(studentRead.name, studentRead.degree, 'total sum = ', sumFunction(studentRead.degree))
+        } else if (studentRead.degree !== undefined && studentRead.comment !== undefined) {
+            console.log(studentRead.name, studentRead.degree, 'total sum = ', sumFunction(studentRead.degree), studentRead.comment)
+        }
+
+
+        // console.log(studentRead.name, studentRead.degree, 'total sum = ', sumFunction(studentRead.degree), studentRead.comment)
+        console.log('final of read')
     } else {
         console.log('not found')
     }
 }
 const listStudent = () => {
     const student = loadStudent()
+
     student.forEach((el) => {
         if (el.degree == undefined && el.comment == undefined) {
             console.log(el.id, el.name)
         } else if (el.degree !== undefined && el.comment == undefined) {
-            console.log(el.id, el.name, el.degree)
+            console.log(el.id, el.name, el.degree, 'total sum = ', sumFunction(el.degree))
         } else if (el.degree !== undefined && el.comment !== undefined) {
-            console.log(el.id, el.name, el.degree, el.comment)
+            console.log(el.id, el.name, el.degree, 'total sum = ', sumFunction(el.degree), el.comment)
         }
     })
 }
