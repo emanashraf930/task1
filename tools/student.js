@@ -11,8 +11,10 @@ const sumFunction = (x) => {
     return sum
 }
 
+
 const addStudent = (id, name, degree, comment) => {
     const student = loadStudent()
+    sumFunction(degree)
     const duplicated = student.find((x) => {
         return x.id === id //return true or false
     })
@@ -22,7 +24,9 @@ const addStudent = (id, name, degree, comment) => {
             id,
             name,
             degree,
-            comment
+            comment,
+            sum
+
         })
         saveStudent(student)
         console.log('student save successfully')

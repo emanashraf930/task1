@@ -1,6 +1,1 @@
-[{ "id": "1", "name": "ahmed", "degree": [10, 10] }, {
-    "id": "2",
-    "name": "ahmed",
-    "degree": [10, 10, 10],
-    "comment": "hello comment"
-}, { "id": 3, "name": "ahmed", "degree": [10, 10, 10] }, { "id": 4, "name": "ahmed", "degree": [20, 20, 20], "comment": "hello comment" }]
+[{"id":"1","name":"ahmed","degree":[10,10]},{"id":"2","name":"ahmed","degree":[10,10,10],"comment":"hello comment"},{"id":3,"name":"ahmed","degree":[10,10,10]},{"id":4,"name":"ahmed","degree":[20,20,20],"comment":"hello comment"},{"id":6,"name":"hello id 6","degree":[10,10],"sum":20},{"id":5,"name":"hello id 6","degree":[10,30],"sum":40}]
