@@ -81,11 +81,11 @@ const readStudents = (y) => {
     if (studentRead) {
 
         if (studentRead.degree == undefined && studentRead.comment == undefined) {
-            console.log(studentRead.name)
+            console.log('name :', studentRead.name)
         } else if (studentRead.degree !== undefined && studentRead.comment == undefined) {
-            console.log(studentRead.name, studentRead.degree, 'total sum = ', sumFunction(studentRead.degree))
+            console.log('name :', studentRead.name, 'degrees :', studentRead.degree, 'total degree =', sumFunction(studentRead.degree))
         } else if (studentRead.degree !== undefined && studentRead.comment !== undefined) {
-            console.log(studentRead.name, studentRead.degree, 'total sum = ', sumFunction(studentRead.degree), studentRead.comment)
+            console.log('name :', studentRead.name, 'degrees :', studentRead.degree, 'total degree =', sumFunction(studentRead.degree), 'comment :', studentRead.comment)
         }
 
 
@@ -100,11 +100,11 @@ const listStudent = () => {
 
     student.forEach((el) => {
         if (el.degree == undefined && el.comment == undefined) {
-            console.log(el.id, el.name)
+            console.log('-id :', el.id, '-name :', el.name)
         } else if (el.degree !== undefined && el.comment == undefined) {
-            console.log(el.id, el.name, el.degree, 'total sum = ', sumFunction(el.degree))
+            console.log('-id :', el.id, '-name :', el.name, '-degrees :', el.degree, '-total degree =', sumFunction(el.degree))
         } else if (el.degree !== undefined && el.comment !== undefined) {
-            console.log(el.id, el.name, el.degree, 'total sum = ', sumFunction(el.degree), el.comment)
+            console.log('-id :', el.id, '-name :', el.name, '-degrees :', el.degree, '-total degree =', sumFunction(el.degree), '-comment :', el.comment)
         }
     })
 }

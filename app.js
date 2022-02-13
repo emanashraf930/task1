@@ -13,7 +13,7 @@ yargs.command({
         id: {
             describe: 'This is student id description in add command',
             demandOption: true,
-            type: 'string'
+            type: 'var'
         },
         name: {
             describe: 'This is student name description in add command',
@@ -43,7 +43,7 @@ yargs.command({
         id: {
             describe: 'the id of student',
             demondOption: true,
-            type: 'string'
+            type: 'var'
         }
     },
     handler: (x) => {
@@ -57,7 +57,7 @@ yargs.command({
         id: {
             describe: 'This is title description in read command',
             demandOption: true,
-            type: 'string'
+            type: 'var'
         }
     },
     handler: (x) => {
